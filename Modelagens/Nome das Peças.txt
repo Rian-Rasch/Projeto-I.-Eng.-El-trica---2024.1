@@ -1,0 +1,15 @@
+modelo a seguir para o nome dos Arquivos:
+Exemplo: EXA101
+EXA - Abreviação do nome do projeto
+1 - 1º número: "código" de quem modelou:
+		1 - Rian
+		  - Tonetto
+		  - Marcus
+		  - Theo
+
+0 - 2º número: parte do projeto onde a peça é empregada:
+		0: Parte estrutural sem emprego de força consideravel.
+
+		9: Montagens(por enquanto).
+
+1 - 3º número: Numero de ordem da peça
