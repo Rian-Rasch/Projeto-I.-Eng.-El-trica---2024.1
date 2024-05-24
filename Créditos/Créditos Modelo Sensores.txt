@@ -1,0 +1,4 @@
+Créditos sensores
+
+KY-26 = https://grabcad.com/library/ir-sensor-ky-026-1
+KY-28 (Editado) = https://grabcad.com/library/ir-sensor-ky-026-1
