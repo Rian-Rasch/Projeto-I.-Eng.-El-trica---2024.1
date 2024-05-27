@@ -3,12 +3,13 @@ Exemplo: EXA101
 EXA - Abreviação do nome do projeto
 1 - 1º número: "código" de quem modelou:
 		1 - Rian
-		  - Tonetto
+		2 - Tonetto
 		  - Marcus
 		  - Theo
 
 0 - 2º número: parte do projeto onde a peça é empregada:
 		0: Parte estrutural sem emprego de força consideravel.
+		1: componentes eletronicos.
 
 		9: Montagens(por enquanto).
 
