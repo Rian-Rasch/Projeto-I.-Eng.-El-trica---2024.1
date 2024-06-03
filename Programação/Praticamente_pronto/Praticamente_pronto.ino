@@ -57,7 +57,7 @@ void aciona_ext(int flag){
 
 void loop() {
   int flag = fogo_temp() + fogo_ir();
-  
+/*
   Serial.print("Flag = ");
   Serial.println(flag);
   
@@ -70,7 +70,7 @@ void loop() {
   Serial.println("%");
   
   Serial.println();
-  
+*/
   delay(1000);
 
   lcd.clear(); // Apaga todos os caracteres do Display
