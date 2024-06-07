@@ -10,7 +10,26 @@ EXA - Abreviação do nome do projeto
 0 - 2º número: parte do projeto onde a peça é empregada:
 		0: Parte estrutural sem emprego de força consideravel.
 		1: componentes eletronicos.
-
+		2: Partes do extintor
+		3: Partes com esforço mecanico consideravel.
 		9: Montagens(por enquanto).
 
 1 - 3º número: Numero de ordem da peça
+
+Peças:
+EXA101 - Corpo da caixa
+EXA102 - Tampa A da Caixa
+EXA104 - Tampa B da Caixa
+EXA120 - Cilindro de Extintor
+EXA121 - Corpo da valvula do extintor
+EXA115 - Display 16x2 genérico (com IC2)
+
+EXA210 - Bateria 18650
+EXA211 - Servo Mg996r
+EXA212 - Sensor IR
+EXA213 - Sensor Termistor
+EXA214 - Quadro elétrico Genérico
+EXA230 - Suporte do Servo 1
+
+EXA301 - Abraçadeira A
+EXA302 - Abraçadeira B
