@@ -4,7 +4,7 @@ EXA - Abreviação do nome do projeto
 1 - 1º número: "código" de quem modelou:
 		1 - Rian
 		2 - Tonetto
-		  - Marcus
+		3 - Marcus
 		  - Theo
 
 0 - 2º número: parte do projeto onde a peça é empregada:
@@ -30,6 +30,8 @@ EXA212 - Sensor IR
 EXA213 - Sensor Termistor
 EXA214 - Quadro elétrico Genérico
 EXA230 - Suporte do Servo 1
+EXA222 - Valvula A
+EXA223 - Valvula B
 
 EXA301 - Abraçadeira A
 EXA302 - Abraçadeira B
