@@ -23,6 +23,7 @@ EXA104 - Tampa B da Caixa
 EXA120 - Cilindro de Extintor
 EXA121 - Corpo da valvula do extintor
 EXA115 - Display 16x2 genérico (com IC2)
+EXA130 - parafuso 
 
 EXA210 - Bateria 18650
 EXA211 - Servo Mg996r
