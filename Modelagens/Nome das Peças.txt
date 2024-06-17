@@ -33,6 +33,7 @@ EXA214 - Quadro elétrico Genérico
 EXA230 - Suporte do Servo 1
 EXA222 - Valvula A
 EXA223 - Valvula B
+EXA200 - Suporte Sensores
 
 EXA301 - Abraçadeira A
 EXA302 - Abraçadeira B
