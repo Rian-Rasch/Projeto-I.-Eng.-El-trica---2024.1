@@ -1,0 +1,2 @@
+Essa é a peça com menos esforço mecanico, e a parte exposta dela é a que fica na mesa.
+então não tem problemas com infill ou parede.
