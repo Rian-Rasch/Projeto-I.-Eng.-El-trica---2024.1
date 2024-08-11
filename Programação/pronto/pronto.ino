@@ -56,6 +56,7 @@ int fogo_temp() {
 void aciona_ext1(int flag){
   servo.write(abertura);
   while(flag !=0){
+    delay(200);
     flag = fogo_temp() + fogo_ir(); 
   }
   servo.write(0);
@@ -63,7 +64,7 @@ void aciona_ext1(int flag){
 
 void aciona_ext2(int flag){
   servo.write(abertura);
-  delay(flag*1000)
+  delay(flag*1000);
   servo.write(0);
 }
 
@@ -80,12 +81,11 @@ void loop() {
   Serial.println(" C ");
   Serial.print("IR: ");
   Serial.println(analogRead(flameSensorPin));
-  /*
   Serial.print("Bat: ");
   Serial.print(map(analogRead(batterySensorPin), 0, 1023, 0, 100));
   Serial.println("%");
   Serial.println();
-  */
+*/
 
   lcd.clear(); 
   lcd.setCursor(0,0); 
@@ -108,5 +108,4 @@ void loop() {
     aciona_ext1(flag);
   }
   delay(500);
-  
 }
