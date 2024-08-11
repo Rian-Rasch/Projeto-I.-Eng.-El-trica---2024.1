@@ -1,22 +1,22 @@
 
-#include <Wire.h>  // Biblioteca para Comunicação I2C
-#include <LiquidCrystal_I2C.h>  // Biblioteca com as funções do display
+#include <Wire.h>  
+#include <LiquidCrystal_I2C.h>
 #include <Servo.h>
 
 #define flameSensorPin A0
 #define tempSensorPin A1
-#define batterySensorPin 2 // Supondo que o sensor de carga da bateria está conectado ao pino A2
+#define batterySensorPin 2 
 #define servoPin 3
 
 #define p_temp 60
-#define p_fogo 200
+#define p_fogo 200 //0 a 1023
 #define abertura 95
 Servo servo;
 
-LiquidCrystal_I2C lcd(0x27,20,4); // Inicializa o display no endereço 0x27
+LiquidCrystal_I2C lcd(0x27,20,4);
 
 void setup() {
-  Serial.begin(9600);
+  //Serial.begin(9600);
   servo.attach(servoPin);
   pinMode(tempSensorPin, INPUT);
   pinMode(flameSensorPin, INPUT);
@@ -53,15 +53,17 @@ int fogo_temp() {
   }
 }
 
-void aciona_ext(int flag){
-  //int tempo = flag * 1000;
+void aciona_ext1(int flag){
   servo.write(abertura);
-  
   while(flag !=0){
-    flag = fogo_temp() + fogo_ir();
-    
+    flag = fogo_temp() + fogo_ir(); 
   }
-  //delay (tempo);
+  servo.write(0);
+}
+
+void aciona_ext2(int flag){
+  servo.write(abertura);
+  delay(flag*1000)
   servo.write(0);
 }
 
@@ -85,29 +87,26 @@ void loop() {
   Serial.println();
   */
 
-  lcd.clear(); // Apaga todos os caracteres do Display
-  lcd.setCursor(0,0); // Marca o cursor na posição coluna 0, linha 0
+  lcd.clear(); 
+  lcd.setCursor(0,0); 
   lcd.print("Temp:");
   char buffer[10];
   dtostrf(temp, 3, 0, buffer);
   lcd.print(buffer);
   lcd.print("C");
-  lcd.setCursor(0,1); // Marca o cursor na posição coluna 0, linha 1
+  lcd.setCursor(0,1); 
   lcd.print("Bat:");
   dtostrf((2.54 + (analogRead(batterySensorPin) / 1023.0) * (4.25 - 2.54))*100/4.25, 3, 0, buffer);
   lcd.print(buffer);
   lcd.print("%");
-  
-  //*(5.0/1023.0))
   
   lcd.setCursor(10,0);
   lcd.print("Ir:");
   lcd.print(analogRead(flameSensorPin)/100);
 
    if(flag != 0){
-    aciona_ext(flag);
+    aciona_ext1(flag);
   }
-
   delay(500);
   
 }
